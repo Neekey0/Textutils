@@ -4,14 +4,14 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import { useState } from 'react';
-import About from './components/About';
+//import About from './components/About';
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 
 function App() {
@@ -47,20 +47,20 @@ function App() {
   }
   return (
     <>
-    <Router>
+   {/* //<Router> */}
     <Navbar title="Text Utils" mode={mode} toggleMode={toggleMode}/>  
     <Alert alert={alert}/>
-    <div className='container'>
-    <Switch>
-          <Route exact path="/About">
+    <div className='container my-3'>
+   {/* <Switch> */}
+          {/* <Route path="/About">
               <About />
           </Route>
-          <Route exact path="/">
-             <TextForm showAlert={showAlert} heading="Enter the text to analyze: "/> 
-          </Route>
-    </Switch>
+          <Route path="/"> */}
+             <TextForm showAlert={showAlert} heading="Enter the text to analyze: " mode={mode}/> 
+          {/* </Route> */}
+    {/* </Switch> */}
     </div>
-    </Router>
+    {/* </Router> */}
     </>
   );
 }
